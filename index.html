@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>aur status</title>
+<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js"></script>
+</head>
+<body>
+<h1>Aur Status</h1>
+A dynamically created table of the aur packages I maintain, together with upstream versions*</h1>
+<p>
+<table id="packages">
+<thead><tr><td>Package</td><td>Version</td><td>Last updated</td><td>Marked out of date</td><td>Latest upstream</td></tr>
+</table>
+</p>
+<p>* based on the following sources</p>
+<ul>
+<li>  Github's latest tag (which might be sorted wrong!) </li>
+<li>  PyPI's version info </li>
+</ul>
+<script>
+$(function() {
+
+var maintainer="jarondl";
+
+var aur_api="https://aur.archlinux.org/rpc.php?callback=?";
+var aur_base="https://aur.archlinux.org/packages/";
+
+var github_re_in=/https:\/\/github.com\/(.*)\/(.*)/;
+var github_re_out="https://api.github.com/repos/$1/$2/tags";
+
+$.getJSON(aur_api, {
+  type: "msearch",
+  arg: maintainer,
+}).done( function(aur_results){
+$.each(aur_results.results, function (i, aur_res){
+
+var pkgname=aur_res.Name;
+
+var aur_link=$("<a>").attr("href", aur_base + aur_res.Name).text("  (AUR)");
+var upstream_link=$("<a>").attr("href", aur_res.URL).text(aur_res.Name);
+var out_of_date = aur_res.OutOfDate ==0 ? "" : moment.utc(1000 * aur_res.OutOfDate).format("YYYY-DD-MM");
+
+$("<tr>").attr("id", pkgname)
+.append(  $("<td>").append(upstream_link).append(aur_link) )
+.append("<td>" + aur_res.Version + "</td><td>" +
+        moment.utc(1000 * aur_res.LastModified).format("YYYY-DD-MM") + "</td><td>" +
+        out_of_date + "</td>")
+.append( add_upstream_version($("<td>"), upstream_link.prop('hostname'),aur_res.URL )).appendTo("#packages");
+})});
+
+function add_upstream_version(element, host, url) {
+switch(host) {
+case "github.com":
+   return add_github_tag(element, url);
+case "pypi.python.org":
+   return add_pypi_version(element, url);
+default:
+   return element.text("unknown upstream");
+}
+}
+
+function add_github_tag(element, github_url){
+
+  $.getJSON(github_url.replace(github_re_in, github_re_out) )
+    .done(function( data ) { element.text("GH: "+data[0].name); })
+    .fail(function(req, stat) { element.text('failed'); });
+  element.text('loading...');
+  return element
+}
+
+function add_pypi_version(element, pypi_url) {
+
+  $.getJSON(pypi_url + '/json?callback=?' )
+    .done(function( data ) { element.text("pypi: " + data.info.version); })
+    .fail(function(req, stat) { element.text('failed'); });
+  element.text('loading...');
+return element
+}
+
+
+
+});
+</script>
+</body>
+</html>
