@@ -12,4 +12,4 @@ hosted on github (see branch gh-pages)
 
 [1]: https://aur.archlinux.org/packages/?K=jarondl&SeB=m
 [2]: https://wiki.archlinux.org/index.php/AUR
-[3]: http://jarondl.net/aur-pkgbuilds-jarondl/
+[3]: http://www.jarondl.net/aur-pkgbuilds-jarondl/
