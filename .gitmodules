@@ -1,0 +1,40 @@
+[submodule "python-isort"]
+	path = python-isort
+	url = https://aur.archlinux.org/python-isort.git
+	pushurl = ssh://aur@aur.archlinux.org/python-isort.git
+[submodule "cxxtools"]
+	path = cxxtools
+	url = https://aur.archlinux.org/cxxtools.git
+	pushurl = ssh://aur@aur.archlinux.org/cxxtools.git
+[submodule "duplicity-backup-git"]
+	path = duplicity-backup-git
+	url = https://aur.archlinux.org/duplicity-backup-git.git
+	pushurl = ssh://aur@aur.archlinux.org/duplicity-backup-git.git
+[submodule "pidgin-light"]
+	path = pidgin-light
+	url = https://aur.archlinux.org/pidgin-light.git
+	pushurl = ssh://aur@aur.archlinux.org/pidgin-light.git
+[submodule "python-natsort"]
+	path = python-natsort
+	url = https://aur.archlinux.org/python-natsort.git
+	pushurl = ssh://aur@aur.archlinux.org/python-natsort.git
+[submodule "python-pies"]
+	path = python-pies
+	url = https://aur.archlinux.org/python-pies.git
+	pushurl = ssh://aur@aur.archlinux.org/python-pies.git
+[submodule "python-setuptools_git"]
+	path = python-setuptools_git
+	url = https://aur.archlinux.org/python-setuptools_git.git
+	pushurl = ssh://aur@aur.archlinux.org/python-setuptools_git.git
+[submodule "python2-apscheduler"]
+	path = python2-apscheduler
+	url = https://aur.archlinux.org/python2-apscheduler.git
+	pushurl = ssh://aur@aur.archlinux.org/python2-apscheduler.git
+[submodule "python2-natsort"]
+	path = python2-natsort
+	url = https://aur.archlinux.org/python2-natsort.git
+	pushurl = ssh://aur@aur.archlinux.org/python2-natsort.git
+[submodule "zimlib-git"]
+	path = zimlib-git
+	url = https://aur.archlinux.org/zimlib-git.git
+	pushurl = ssh://aur@aur.archlinux.org/zimlib-git.git
