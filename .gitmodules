@@ -1,40 +1,40 @@
 [submodule "python-isort"]
 	path = python-isort
-	url = https://aur.archlinux.org/python-isort.git
-	pushurl = ssh://aur@aur.archlinux.org/python-isort.git
+	url = .
+        branch = python-isort
 [submodule "cxxtools"]
 	path = cxxtools
-	url = https://aur.archlinux.org/cxxtools.git
-	pushurl = ssh://aur@aur.archlinux.org/cxxtools.git
+	branch = cxxtools
+	url = .
 [submodule "duplicity-backup-git"]
 	path = duplicity-backup-git
-	url = https://aur.archlinux.org/duplicity-backup-git.git
-	pushurl = ssh://aur@aur.archlinux.org/duplicity-backup-git.git
+	branch = duplicity-backup-git
+	url = .
 [submodule "pidgin-light"]
 	path = pidgin-light
-	url = https://aur.archlinux.org/pidgin-light.git
-	pushurl = ssh://aur@aur.archlinux.org/pidgin-light.git
+	branch = pidgin-light
+	url = .
 [submodule "python-natsort"]
 	path = python-natsort
-	url = https://aur.archlinux.org/python-natsort.git
-	pushurl = ssh://aur@aur.archlinux.org/python-natsort.git
+	branch = python-natsort
+	url = .
 [submodule "python-pies"]
 	path = python-pies
-	url = https://aur.archlinux.org/python-pies.git
-	pushurl = ssh://aur@aur.archlinux.org/python-pies.git
+	branch = python-pies
+	url = .
 [submodule "python-setuptools_git"]
 	path = python-setuptools_git
-	url = https://aur.archlinux.org/python-setuptools_git.git
-	pushurl = ssh://aur@aur.archlinux.org/python-setuptools_git.git
+	branch = python-setuptools_git
+	url = .
 [submodule "python2-apscheduler"]
 	path = python2-apscheduler
-	url = https://aur.archlinux.org/python2-apscheduler.git
-	pushurl = ssh://aur@aur.archlinux.org/python2-apscheduler.git
+	branch = python2-apscheduler
+	url = .
 [submodule "python2-natsort"]
 	path = python2-natsort
-	url = https://aur.archlinux.org/python2-natsort.git
-	pushurl = ssh://aur@aur.archlinux.org/python2-natsort.git
+	branch = python2-natsort
+	url = .
 [submodule "zimlib-git"]
 	path = zimlib-git
-	url = https://aur.archlinux.org/zimlib-git.git
-	pushurl = ssh://aur@aur.archlinux.org/zimlib-git.git
+	branch = zimlib-git
+	url = .
