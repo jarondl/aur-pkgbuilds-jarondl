@@ -1,40 +1,40 @@
 [submodule "python-isort"]
 	path = python-isort
-	url = .
+	url = ./
         branch = python-isort
 [submodule "cxxtools"]
 	path = cxxtools
 	branch = cxxtools
-	url = .
+	url = ./
 [submodule "duplicity-backup-git"]
 	path = duplicity-backup-git
 	branch = duplicity-backup-git
-	url = .
+	url = ./
 [submodule "pidgin-light"]
 	path = pidgin-light
 	branch = pidgin-light
-	url = .
+	url = ./
 [submodule "python-natsort"]
 	path = python-natsort
 	branch = python-natsort
-	url = .
+	url = ./
 [submodule "python-pies"]
 	path = python-pies
 	branch = python-pies
-	url = .
+	url = ./
 [submodule "python-setuptools_git"]
 	path = python-setuptools_git
 	branch = python-setuptools_git
-	url = .
+	url = ./
 [submodule "python2-apscheduler"]
 	path = python2-apscheduler
 	branch = python2-apscheduler
-	url = .
+	url = ./
 [submodule "python2-natsort"]
 	path = python2-natsort
 	branch = python2-natsort
-	url = .
+	url = ./
 [submodule "zimlib-git"]
 	path = zimlib-git
 	branch = zimlib-git
-	url = .
+	url = ./
